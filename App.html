@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #3f6593;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .justify-content-start {
+            justify-content: start;
+        }
+
+        .justify-content-end {
+            justify-content: end;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .align-items-start {
+            align-items: start;
+        }
+
+        .align-items-end {
+            align-items: end;
+        }
+
+        .align-items-between {
+            align-items: space-between;
+        }
+
+        .text-gray-400 {
+            --tw-text-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-text-opacity));
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .text-base {
+            font-size: 1rem
+                /* 16px */
+            ;
+            line-height: 1.5rem
+                /* 24px */
+            ;
+        }
+
+        .my-5 {
+            margin-top: 1.25rem
+                /* 20px */
+            ;
+            margin-bottom: 1.25rem
+                /* 20px */
+            ;
+        }
+
+        .bg-\[\#343541\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(52 53 65 / var(--tw-bg-opacity));
+        }
+
+        .px-2 {
+            padding-left: 0.5rem
+                /* 8px */
+            ;
+            padding-right: 0.5rem
+                /* 8px */
+            ;
+        }
+
+        .py-1 {
+            padding-top: 0.25rem
+                /* 4px */
+            ;
+            padding-bottom: 0.25rem
+                /* 4px */
+            ;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:text-base {
+                font-size: 1rem
+                    /* 16px */
+                ;
+                line-height: 1.5rem
+                    /* 24px */
+                ;
+            }
+        }
+
+        .text-sm {
+            font-size: 0.875rem
+                /* 14px */
+            ;
+            line-height: 1.25rem
+                /* 20px */
+            ;
+        }
+
+        .pl-\[14px\] {
+            padding-left: 14px;
+        }
+
+        .rounded {
+            border-radius: 0.25rem
+                /* 4px */
+            ;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .text-sm {
+            font-size: 0.875rem
+                /* 14px */
+            ;
+            line-height: 1.25rem
+                /* 20px */
+            ;
+        }
+
+        .gap-2 {
+            gap: 0.5rem
+                /* 8px */
+            ;
+        }
+
+        .py-2 {
+            padding-top: 0.5rem
+                /* 8px */
+            ;
+            padding-bottom: 0.5rem
+                /* 8px */
+            ;
+        }
+
+        .pl-2 {
+            padding-left: 0.5rem
+                /* 8px */
+            ;
+        }
+
+        .bg-black-black {
+            --tw-bg-opacity: 1;
+            background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+        }
+
+        .text-white-White {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity));
+        }
+
+        .overflow-x-auto {
+            overflow-x: auto;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .text-api {
+            color: rgb(46 149 211);
+        }
+
+        .none {
+            display: none;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .splish-screen {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            font-weight: 100px;
+            z-index: 9999;
+            animation: splish 4s ease-in-out;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .hi {
+            background-color: #08448d;
+            padding: 20px 0px;
+            box-shadow: 0px 3px 10px #07162880;
+            top: 0px;
+            position: sticky;
+            z-index: 50;
+            font-size: 15px;
+        }
+
+        .p {
+            font-size: 20px;
+            line-height: 28px;
+        }
+
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 80px 0px;
+            max-width: 50%;
+            margin: 30px auto;
+        }
+
+        #hero svg {
+            transform: scale(1.3, 1.3);
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 55%;
+            margin: 30px auto;
+        }
+
+        .section-1 {
+            border: #ffffff61 2px solid;
+            padding: 30px 15px;
+            border-radius: 20px;
+        }
+
+        .logo {
+            animation: logo 4s ease-in-out;
+        }
+
+        @keyframes logo {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(5, 5);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes splish {
+            0% {
+                background-color: #025e8f;
+            }
+
+            50% {
+                background-color: #3f6593;
+            }
+
+            100% {
+                background-color: #08448d;
+            }
+        }
+
+        @media (max-width:800px) {
+            .container {
+                max-width: 100% !important;
+                margin: 10px !important;
+            }
+
+            @keyframes logo {
+                0% {
+                    transform: scale(1, 1);
+                }
+
+                50% {
+                    transform: scale(1.4, 1.4);
+                }
+
+                100% {
+                    transform: scale(1, 1);
+                }
+            }
+
+            #hero svg {
+                transform: scale(1, 1);
+            }
+
+            .p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="flex justify-content-center align-items-center hi text-white">
+        <h1>
+            Hello Shahat
+        </h1>
+    </div>
+    <section class="">
+        <div id="hero"></div>
+        <div class="mt-20 container section-1 text-white">
+            <p class="p">
+                I've crafted an advanced API for you, embarking on a journey that begins with installing Node.js and
+                Express. To enhance security, I implemented JSON Web Token for authentication. MongoDB serves as the
+                database, contributing to robust data management. The intricacies involve meticulous coding and
+                integration,
+                ensuring seamless functionality. This API, with its comprehensive features, reflects a commitment to
+                excellence, blending cutting-edge technologies for a powerful and secure solution.
+            </p>
+        </div>
+    </section>
+    <section class="mt-20">
+        <div class="mt-20">
+            <div class="container mt-20" id="list-api-ul"></div>
+        </div>
+        <script>
+            const copy = (api) => {
+                // Create a temporary textarea element to hold the text
+                const textarea = document.createElement("textarea");
+                textarea.value = api;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                // Remove the temporary textarea
+                document.body.removeChild(textarea);
+                toast.success("Copied!");
+                return "Text copied to clipboard";
+            };
+
+            const listAPIUl = document.getElementById("list-api-ul");
+            const list = [{ name: "Sign up", method: "POST /", description: "You can sign Up", api: "http://localhost:8000/auth/signup" }, { name: "Sign In", method: "POST /", description: "You can sign In", api: "http://localhost:8000/auth/signin" }, { name: "Create user.", method: "POST /", description: "You can create user with this api", api: "http://localhost:8000/api/user" }, { name: "Fetch users.", method: "GET /", description: "You can get users with this api", api: "http://localhost:8000/api/user" }, { name: "Fetch user.", method: "GET /", description: "You can get user with this api  hint: the :userid is varaible replace it with real id", api: "http://localhost:8000/api/user/:userId" }, { name: "Update user.", method: "PUT /", description: "You can update user with this api", api: "http://localhost:8000/api/user/:userId" }, { name: "Delete user.", method: "DELETE /", description: "You can get user with this api", api: "http://localhost:8000/api/user/:userId" }, { name: "Create Category.", method: "POST /", description: "You can create category with this api", api: "http://localhost:8000/api/category" }, { name: "Fetch Categories.", method: "GET /", description: "You can get categories with this api", api: "http://localhost:8000/api/category" }, { name: "Fetch Category.", method: "GET /", description: "You can get category with this api", api: "http://localhost:8000/api/category/:id" }, { name: "Update Category.", method: "PUT /", description: "You can update category with this api", api: "http://localhost:8000/api/category/:id" }, { name: "Delete Category.", method: "DELETE /", description: "You can get category with this api", api: "http://localhost:8000/api/category/:id" }, { name: "Create product.", method: "POST /", description: "You can create product with this api", api: "http://localhost:8000/api/product" }, { name: "Fetch products.", method: "GET /", description: "You can get products with this api", api: "http://localhost:8000/api/product" }, { name: "Fetch product.", method: "GET /", description: "You can get product with this api", api: "http://localhost:8000/api/product/:id" }, { name: "Update product.", method: "PUT /", description: "You can update product with this api", api: "http://localhost:8000/api/product/:id" }, { name: "Delete product.", method: "DELETE /", description: "You can get product with this api", api: "http://localhost:8000/api/product/:id" }, { name: "Fetch Products By CategoryId", method: "GET /", description: "You can get products by categoryId with this api", api: "http://localhost:8000/api/:categoryId/category" }, { name: "Create cart", method: "POST /", description: "You can post cart with this api", api: "http://localhost:8000/api/:categoryId/category" }, { name: "Create cart", method: "POST /", description: "You can post cart with this api", api: "http://localhost:8000/api/cart" }, { name: "Delete cart", method: "DELETE /", description: "You can delete cart with this api", api: "http://localhost:8000/api/cart/:id" }, { name: "Fetch Cart By UserId", method: "GET /", description: "You can get cart by userId with this api", api: "http://localhost:8000/api/user/:userId/cart" },
+
+            ];
+
+            list.forEach((item, i) => {
+                listAPIUl.innerHTML += `<div class=""><div class="my-5 flex items-center"> <h1 class="lg:text-lg font-semibold"><span class="text-gray-400 text-base">${i + 1}</h1> <p class="lg:text-base text-sm pl-[14px] text-white">${item.description}</p></div><div class="rounded overflow-hidden"> <div class="bg-[#343541] px-2 py-1 flex justify-between text-gray-300 ">  <div><h6 class="text-sm text-white">${item.name + `____________` + item.method}</h6>  </div>  <div><button class="text-sm flex gap-2 items-center cursor-pointer" onclick="copy('${item.api}')"> <span>  Copy </span></button>  </div> </div> <div class="py-2 pl-2 text-sm bg-black-black text-white-White overflow-x-auto scrollbar-hide flex align-items-start">  <span class="text-api">Api :</span>  <div class="px-2">${item.api}  </div> </div></div></div>`;
+            });
+
+        </script>
+    </section>
+    <div>
+
+
+    </div>
+    <script>
+        const hero = document.getElementById('hero');
+        const splish_screen = document.createElement('div');
+        splish_screen.className = "splish-screen";
+        document.body.style.overflowY = "hidden"
+        setTimeout(() => {
+            document.body.removeChild(splish_screen)
+            document.body.style.overflowY = "auto"
+        }, 4000);
+
+
+        const logoSVG = document.createElement('svg');
+        const logoSVG2 = document.createElement('svg');
+        const svgLogo = `<svg xmlns="http://www.w3.org/2000/svg" width="241" height="76" viewBox="0 0 241 76" fill="none">    <path d="M2 64.2025V52.2449H29.5024V3.61745C29.5024 3.61745 45.0462 -0.0218067 53.8162 3.61745C59.3658 5.92035 63.0421 7.94799 66.1723 12.7849C73.9106 24.7425 70.5372 35.9518 60.9907 43.476C52.1887 50.4136 32.2925 43.476 32.2925 43.476" stroke="white" stroke-width="2.7716" stroke-linecap="round"/>    <path d="M41.0614 45.8676L59.0898 72.9714L72.5497 59.4195" stroke="white" stroke-width="2.7716" stroke-linecap="round"/>    <path d="M113.813 47.8605C113.813 61.3078 105.385 71.5856 95.6677 71.5856C85.9505 71.5856 77.5228 61.3078 77.5228 47.8605C77.5228 34.4132 85.9505 24.1354 95.6677 24.1354C105.385 24.1354 113.813 34.4132 113.813 47.8605Z" stroke="white" stroke-width="2.7716"/>    <path d="M121.487 24.344C121.487 24.344 119.893 45.8676 121.487 56.2308C123.081 66.5941 128.661 70.1814 131.053 71.3771C133.445 72.5729 143.807 74.5658 148.989 71.3771C154.171 68.1884 156.961 64.2026 158.556 56.2308C160.15 48.2591 158.556 24.344 158.556 24.344" stroke="white" stroke-width="2.7716" stroke-linecap="round"/>    <path d="M165.597 2.02313C165.597 2.02313 165.199 59.0209 165.597 61.4125C165.996 63.804 170.779 68.1884 172.373 69.3842C173.968 70.5799 177.499 72.6283 181.142 72.5729C184.64 72.5197 186.687 71.4456 189.513 69.3842C192.656 67.0908 194.099 65.0463 195.491 61.4125C196.343 59.189 196.618 57.8138 196.687 55.4337" stroke="white" stroke-width="2.7716" stroke-linecap="round"/>    <path d="M166.616 25.1411H197.307" stroke="white" stroke-width="2.7716" stroke-linecap="round"/>    <path d="M238.998 56.8728C238.998 56.8728 236.687 64.0047 233.418 67.236C230.493 70.127 228.296 71.6795 224.251 72.4176C220.547 73.0934 218.166 72.6553 214.684 71.2219C212.09 70.1534 210.716 69.1939 208.706 67.236C205.413 64.029 204.38 61.2947 203.125 56.8728C202.142 53.409 202.143 47.7053 202.143 47.7053M202.143 47.7053C202.143 47.7053 202.024 45.2902 202.143 44.5166C203.125 38.1392 207.908 31.3633 207.908 31.3633C207.908 31.3633 210.699 27.312 214.684 26.1816C217.53 25.3748 221.353 24.7894 224.251 25.3845C228.206 26.197 230.441 27.4394 233.418 30.1675C235.411 31.9937 237.163 34.6138 238.201 38.5378C239.077 41.8483 238.998 47.7053 238.998 47.7053H202.143Z" stroke="white" stroke-width="2.7716" stroke-linecap="round"/></svg>`
+        logoSVG.innerHTML = svgLogo;
+        logoSVG2.innerHTML = svgLogo
+        logoSVG.className = "logo";
+        splish_screen.appendChild(logoSVG);
+        document.body.appendChild(splish_screen);
+        hero.appendChild(logoSVG2);
+    </script>
+</body>
+
+</html>
